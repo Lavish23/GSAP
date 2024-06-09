@@ -1,28 +1,29 @@
-var path=`M 10 100 Q 700 100 1390 100`;
+const main=document.querySelector(".main");
+const cursor=document.querySelector(".cursor");
+const imagediv=document.querySelector(".image")
 
-var finalpath=`M 10 100 Q 700 100 1390 100`;
-
-var string=document.querySelector(".string");
-
-string.addEventListener("mousemove",function(dets)
+main.addEventListener("mousemove",function(dets)
 {
-  path=`M 10 100 Q ${dets.x} ${dets.y} 1390 100`;
-  gsap.to("svg path",{
-    attr:{d:path},
-    duration:0.2,
-    ease:"power3.out"
+  gsap.to(cursor,{
+    x:dets.x,
+    y:dets.y,
   })
 })
 
-
-string.addEventListener("mouseleave",function()
+imagediv.addEventListener("mouseenter",function(dets)
 {
-  gsap.to("svg path",{
-    attr:{d:finalpath},
-    duration:1.5,
-    ease:"elastic.out(1,0.2)"
+  cursor.innerHTML="view more"
+  gsap.to(cursor,{
+    scale:5,
+    backgroundColor:"#ffffff5c"
   })
 })
 
-
-
+imagediv.addEventListener("mouseleave",function(dets)
+{
+  cursor.innerHTML="";
+  gsap.to(cursor,{
+    scale:1,
+    backgroundColor:"#fff"
+  })
+})
