@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font: #fff;
+  color: #fff;
 }
 
 html,body
@@ -11,78 +11,23 @@ html,body
   height: 100%;
   width: 100%;
 }
+
 body
 {
-  overflow-x: hidden;
-}
-
-.main
-{
-  width: 100%;
-  height: 100%;
-  background-color: lightblue;
-  background-image: url('https://images.pexels.com/photos/46160/field-clouds-sky-earth-46160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-  background-size: cover;
-  background-position: center;
-
-}
-
-.nav
-{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 40px;
-  color: #fff;
-}
-
-.nav h2
-{
-  font-size: 30px;
-}
-
-.nav i
-{
-  font-size: 30px;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.full
-{
-  height: 100%;
-  width: 40%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: hsla(0, 0%, 100%, 0.456);
-  backdrop-filter: blur(10px);
-  padding: 100px 40px;
-  right: -40%;
-}
-
-.full h4
-{
-  font-size: 30px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  
-}
-
-.full i
-{
-  position: absolute;
-  right: 5%;
-  top: 5%;
-  background-color: #fff;
-  border-radius: 50%;
-  padding: 5px;
-  width: 30px; /* Adjust width to your needs */
-  height: 30px; /* Adjust height to your needs */
+  background-color: #111;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px; 
-  font-weight: 800;
-  cursor: pointer;
+}
+
+ h1
+{
+  font-size: 100px;
+  /* background-color: red; */
+  overflow: hidden;
+}
+
+h1 span
+{
+  display: inline-block;
 }
