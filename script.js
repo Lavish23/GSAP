@@ -1,29 +1,41 @@
-const main=document.querySelector(".main");
-const cursor=document.querySelector(".cursor");
-const imagediv=document.querySelector(".image")
+var menu = document.querySelector(".nav i");
+var close = document.querySelector(".full i")
 
-main.addEventListener("mousemove",function(dets)
-{
-  gsap.to(cursor,{
-    x:dets.x,
-    y:dets.y,
-  })
+var tl = gsap.timeline();
+
+tl.to(".full",
+  {
+    right: "0",
+    duration: 0.8
+  }
+)
+
+
+tl.from(".full h4",
+  {
+    x: 150,
+    duration: 0.4,
+    stagger: 0.2,
+    opacity: 0
+  }
+)
+
+tl.from(".full i",
+  {
+    opacity: 0,
+    duration: 0.5
+  }
+)
+
+tl.pause();
+
+menu.addEventListener("click", function () {
+  tl.play();
 })
 
-imagediv.addEventListener("mouseenter",function(dets)
-{
-  cursor.innerHTML="view more"
-  gsap.to(cursor,{
-    scale:5,
-    backgroundColor:"#ffffff5c"
-  })
+close.addEventListener("click", function () {
+  tl.reverse();
 })
 
-imagediv.addEventListener("mouseleave",function(dets)
-{
-  cursor.innerHTML="";
-  gsap.to(cursor,{
-    scale:1,
-    backgroundColor:"#fff"
-  })
-})
+
+
