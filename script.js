@@ -1,50 +1,33 @@
-function breakTheElement()
-{
-  var h1=document.querySelector("h1");
-  
-  var splittedtext=h1.textContent.split("");
+var tl=gsap.timeline();
+var full = document.querySelector(".full");
+var home = document.querySelector(".nav i");
+var close = document.querySelector(".full i");
 
-  var halflength=Math.floor(splittedtext.length/2);
 
-  
-  var clutter="";
-  
-  splittedtext.forEach(function(dets,ind)
-  {
-    if(ind<halflength)
-      {
-        clutter+=`<span class="a"
-        >${dets}</span>`;
-      }
-
-      else
-      {
-        clutter+=`<span class="b"
-        >${dets}</span>`;
-      }
+  tl.to(full,{
+    right:0,
   })
-  
-  h1.innerHTML=clutter;
-
-}
-
-breakTheElement();
 
 
-gsap.from("h1 .a",
+  tl.from(".full h4",
+    {
+      x:150,
+      opacity:0,
+      duration:0.4,
+      stagger:0.2
+    }
+  )
+
+  tl.pause();
+  home.addEventListener("click",function()
   {
-    y:70,
-    duration:0.6,
-    delay:0.4,
-    stagger:0.1
-  }
-)
+    tl.play();
+  })
 
-gsap.from("h1 .b",
-  {
-    y:70,
-    duration:0.6,
-    delay:0.4,
-    stagger:-0.1
-  }
-)
+  close.addEventListener("click",function()
+{
+  tl.reverse();
+})
+
+
+
