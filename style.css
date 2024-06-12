@@ -15,70 +15,39 @@ html,body
 
 
 
-.main
+.page1,.page2,.page3
 {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #111;
-  background-image: url('https://imgs.search.brave.com/zB_i3yCjxDdxmNabnpvrVGvv6wbwCU-oo-HSWg9HQKc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/OC8xMi8yMC8xNC9m/aWVsZHMtMTU4OTYx/M182NDAuanBn');
-
-  background-size: cover;
-  background-position: center;
+  padding: 5vw 0;
 }
 
-.nav 
+.move
 {
+  background-color: #d8ff08;
+  display: flex;
+  padding: 4vw 0;
+}
+
+.marque
+{
+  flex-shrink: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: rgb(150, 168, 168);
-  
+  gap:4vw;
+  padding:0px 10px;
+  /* background-color: red; */
+  transform: translateX(-100%);
 }
-
-.nav i
+.marque h1
 {
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-.full
-{
-  height: 100%;
-  width: 40%;
-  background-color: hsla(0, 0%, 100%, 0.466);
-  position: absolute;
-  top: 0;
-  right: 0;
-  backdrop-filter: blur(30px);
-  padding: 80px;
-  right: -40%;
-}
-
-.full h4
-{
-  font-size: 50px;
-  margin-bottom: 10px;
+  font-size: 60px;
+  font-weight: 700;
   color: #111;
 }
 
-.full i
+.marque img
 {
-  position:absolute;
-  right: 5%;
-  top: 5%;
-  font-size: 25px;
-  font-weight: 800;
-  color: #111;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+  height: 4vw;
 }
-
-
-
